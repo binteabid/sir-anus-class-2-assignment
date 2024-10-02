@@ -1,27 +1,75 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Container setup */
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white; /* White background */
+  padding: 20px;
+  min-height: 100vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Child container for description and image */
+.childContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: auto;
+  margin: 40px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Styling for the description box */
+.descriptionBox {
+  background-color: skyblue; /* Sky background for box */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Styling for the heading (black font) */
+.heading {
+  font-size: 60px;
+  font-weight: bold;
+  color: black; /* Black font for headings */
+}
+
+/* Styling for highlighted text */
+.highlight {
+  color: deeppink;
+}
+
+/* Styling for the body text (white font) */
+.bodyText {
+  font-size: 20px;
+  color: white; /* White font for body text */
+}
+
+/* Profile picture section */
+.profilePictureBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Golden photo frame for the profile image */
+.goldenFrame {
+  border: 5px solid gold; /* Golden border */
+  padding: 10px;
+  border-radius: 50%; /* Circular frame */
+}
+
+/* Profile image styling */
+.profileImage {
+  width: 480px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%; /* Circular image */
 }
